@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "__dirname":"readonly",
+        "__filename": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+    },
+    "extends": "eslint:recommended"
+}
