@@ -1,5 +1,10 @@
 h1{
-    color: red
+    color: goldenrod
+}
+p{
+    color: hotpink;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .user{

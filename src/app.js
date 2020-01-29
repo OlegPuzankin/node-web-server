@@ -2,28 +2,40 @@ const express = require('express')
 const path = require('path')
 
 const app = express();
-console.log(__dirname);
-console.log(__filename);
 
 
 const publicDirPath=path.join(__dirname, '../public');
-console.log(publicDirPath);
+
+const viewsPath=path.join(__dirname, '../templates')
+console.log(viewsPath)
+app.set('view engine', 'hbs')
+app.set('views', viewsPath)
 
 app.use(express.static(publicDirPath))
 
 
-// app.get('/help', (req, res)=>{
-//     res.send('help.html')
-// })
+app.get('', (req, res)=>{
+    res.render('index', {
+        title: 'Weather app',
+        name: 'Oleg Pzzz'
+    })
+})
 
-// app.get('/help', (req, res)=>{
-//     console.log('send response');
+app.get('/help', (req, res)=>{
+       
+    res.render('help', {
+        title: 'Help page',
+        helpText: 'some text will be here'
+    })
+})
+
+
+app.get('/about', (req, res)=>{
     
-//     res.send({
-//         about: 'about page wt'
-//     })
-// })
-
+    res.render('about', {
+        title: 'About page'
+    })
+})
 
 app.listen(3000, ()=>console.log('server is up'));
 
