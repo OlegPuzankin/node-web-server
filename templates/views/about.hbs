@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,13 @@
 
     <title>Document</title>
 </head>
+
 <body>
-    <h1>{{title}}</h1>
-    <img class="img" src="/img/pic.jpg" alt="pic">
+    {{>header}}
+    <div class="main-content">
+        <img class="img" src="/img/pic.jpg" alt="pic">
+    </div>
+    {{>footer}}
 </body>
+
 </html>
